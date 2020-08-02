@@ -1,6 +1,7 @@
 package day_37Array_List;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Find_Unique {
@@ -16,10 +17,12 @@ public class Find_Unique {
 
 
         ArrayList<String> list2 = new ArrayList<>();
-        for (String each : str.split("")){
-              list2.add(each);
-        }
-        System.out.println(list2);
+        list2.addAll(Arrays.asList(str.split("")));
+
+//        for (String each : str.split("")){
+//              list2.add(each);
+//        }
+//        System.out.println(list2);
 
         for (String eachElement :list2) {
             int count = Collections.frequency(list2, eachElement);
